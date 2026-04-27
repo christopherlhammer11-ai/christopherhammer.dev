@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Christopher L. Hammer builds local-first AI systems: HammerLock, Craig, RecallMax, Tool Use Guardian, and the infrastructure for useful agents."
+      content="Christopher L. Hammer builds local-first AI agents that run reliably in real-world environments: HammerLock, Craig, RecallMax, Tool Use Guardian, and proof-first product demos."
     />
     <title>Christopher Hammer | Local-First AI Workbench</title>
+    <link rel="icon" href="assets/hammerlock-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -137,7 +138,7 @@
       }
 
       .hero {
-        padding: 86px 0 68px;
+        padding: 64px 0 58px;
       }
 
       .hero-grid {
@@ -179,7 +180,7 @@
 
       h1 {
         max-width: 760px;
-        font-size: clamp(48px, 8vw, 96px);
+        font-size: clamp(44px, 6.2vw, 78px);
       }
 
       h2 {
@@ -192,23 +193,23 @@
 
       .lead {
         max-width: 720px;
-        margin: 24px 0 0;
+        margin: 20px 0 0;
         color: var(--soft);
-        font-size: 20px;
+        font-size: 19px;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin-top: 32px;
+        margin-top: 26px;
       }
 
       .proof-row {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
-        margin-top: 34px;
+        margin-top: 26px;
         max-width: 720px;
       }
 
@@ -228,6 +229,108 @@
       .proof span {
         color: var(--muted);
         font-size: 13px;
+      }
+
+      .hero-video-card {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: linear-gradient(180deg, rgba(16, 37, 30, 0.9), rgba(8, 20, 16, 0.94));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-video-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(64, 245, 154, 0.14), transparent 46%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero-video-frame {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        background: #050b09;
+        border-bottom: 1px solid rgba(167, 255, 208, 0.14);
+      }
+
+      .hero-video-frame video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-video-copy {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+      }
+
+      .hero-video-copy h3 {
+        margin-top: 8px;
+        font-size: 24px;
+      }
+
+      .hero-video-copy p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .hero-video-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .impact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .impact-card {
+        min-height: 230px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(13, 27, 22, 0.78);
+      }
+
+      .impact-card strong {
+        display: inline-flex;
+        margin-bottom: 12px;
+        color: var(--green-2);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .impact-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .role-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .role-pill {
+        padding: 8px 12px;
+        border: 1px solid rgba(167, 255, 208, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.035);
+        color: var(--soft);
+        font-size: 13px;
+        font-weight: 700;
       }
 
       .machine-card {
@@ -1119,6 +1222,7 @@
         .demo-grid,
         .video-grid,
         .clip-library,
+        .impact-grid,
         .signal-grid,
         .local-grid,
         .offer-grid,
@@ -1148,6 +1252,7 @@
         .demo-grid,
         .video-grid,
         .clip-library,
+        .impact-grid,
         .signal-grid,
         .local-grid,
         .offer-grid,
@@ -1183,6 +1288,7 @@
           <a href="#workflow">Workflow</a>
           <a href="#demos">Demos</a>
           <a href="#projects">Projects</a>
+          <a href="#impact">Impact</a>
           <a href="#use-cases">Use Cases</a>
           <a href="#local-business">Local</a>
           <a href="#proof">Proof</a>
@@ -1195,74 +1301,105 @@
       <header class="hero">
         <div class="wrap hero-grid">
           <div>
-            <div class="eyebrow">Local-first AI systems</div>
-            <h1>I build useful AI tools and ship the proof.</h1>
+            <div class="eyebrow">AI agent engineer · product builder</div>
+            <h1>I build local-first AI agents that work in real-world environments.</h1>
             <p class="lead">
-              This is a body of work across local-first AI, autonomous coding,
-              agent reliability, private documents, code intelligence, CRM,
-              marketplaces, and business automation. Some pieces connect. Some
-              are standalone proof that I can learn, build, package, and ship.
+              I ship the product surface and the reliability layers behind it:
+              private AI workspaces, autonomous coding agents, memory,
+              verification, tool-call recovery, document intelligence, and
+              business automation.
             </p>
             <div class="hero-actions">
-              <a class="button" href="#workflow">See the workflow</a>
+              <a class="button" href="#proof">Watch the proof</a>
+              <a class="button secondary" href="#impact">Why it matters</a>
               <a class="button secondary" href="https://craigbuilds.dev">Craig demo site</a>
               <a class="button secondary" href="mailto:christopherlhammer11@gmail.com?subject=Craig%20audit%20request&body=Hi%20Christopher%2C%0A%0AI%27d%20like%20a%20Craig%20digital%20readiness%20audit.%0A%0ABusiness%20name%3A%0AWebsite%3A%0AIndustry%3A%0AWhat%20I%20want%20help%20with%3A%0A">Request audit</a>
             </div>
             <div class="proof-row" aria-label="Portfolio proof points">
               <div class="proof">
-                <strong>15+</strong>
-                <span>shipped AI projects</span>
+                <strong>16</strong>
+                <span>narrated proof demos</span>
               </div>
               <div class="proof">
-                <strong>Local</strong>
-                <span>privacy-first architecture</span>
+                <strong>AI agents</strong>
+                <span>memory, tools, verification</span>
               </div>
               <div class="proof">
-                <strong>Real</strong>
-                <span>apps, CLIs, and agents</span>
+                <strong>Products</strong>
+                <span>not just model wrappers</span>
               </div>
+            </div>
+            <div class="role-strip" aria-label="Best-fit roles">
+              <span class="role-pill">Applied AI Engineer</span>
+              <span class="role-pill">AI Agent Engineer</span>
+              <span class="role-pill">LLM Product Engineer</span>
+              <span class="role-pill">AI Prototyping Engineer</span>
             </div>
           </div>
 
-          <aside class="machine-card" aria-label="Selected portfolio projects">
-            <div class="node">
-              <div>
-                <b>HammerLock AI</b>
-                <span>private command center</span>
-              </div>
-              <em>product</em>
+          <aside class="hero-video-card" aria-label="Portfolio proof video">
+            <div class="hero-video-frame">
+              <video src="assets/videos/narrated/portfolio-proof-narrated.mp4" controls preload="metadata"></video>
             </div>
-            <div class="node">
-              <div>
-                <b>Craig</b>
-                <span>autonomous software builder</span>
+            <div class="hero-video-copy">
+              <span class="tag">Start here · narrated proof</span>
+              <h3>Watch the work before reading the resume.</h3>
+              <p>
+                A quick tour of the systems: HammerLock, Craig, agent
+                reliability, local documents, code intelligence, CRM, and demos.
+              </p>
+              <div class="hero-video-links">
+                <a class="mini-button" href="#proof">More demos</a>
+                <a class="mini-button" href="https://github.com/christopherlhammer11-ai">GitHub</a>
               </div>
-              <em>builder</em>
-            </div>
-            <div class="node">
-              <div>
-                <b>RecallMax + Guardian</b>
-                <span>memory and tool reliability</span>
-              </div>
-              <em>infra</em>
-            </div>
-            <div class="node">
-              <div>
-                <b>Repo + Doc Intelligence</b>
-                <span>private context for agents</span>
-              </div>
-              <em>context</em>
-            </div>
-            <div class="node">
-              <div>
-                <b>Genesis</b>
-                <span>agent skill economy</span>
-              </div>
-              <em>future</em>
             </div>
           </aside>
         </div>
       </header>
+
+      <section id="impact">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Why this matters</h2>
+            <p>
+              The value is not “I made a lot of repos.” The value is that the
+              same failure points show up in every serious AI product: privacy,
+              memory, tool reliability, source trust, and useful UX.
+            </p>
+          </div>
+          <div class="impact-grid">
+            <article class="impact-card">
+              <strong>Product thinking</strong>
+              <h3>AI people can actually use</h3>
+              <p>
+                HammerLock is framed around founders, lawyers, analysts, and
+                operators with sensitive work. Craig is framed around builders
+                who need a reviewable agent loop. The projects are packaged as
+                user workflows, not just experiments.
+              </p>
+            </article>
+            <article class="impact-card">
+              <strong>Reliability thinking</strong>
+              <h3>Agents need more than prompts</h3>
+              <p>
+                Tool Use Guardian, Prompt Condenser, Real-Time Verifier,
+                RecallMax, and Surgical Code Editor show the infrastructure
+                required to make agents cheaper, safer, more observable, and
+                easier to trust.
+              </p>
+            </article>
+            <article class="impact-card">
+              <strong>Business thinking</strong>
+              <h3>Proof can turn into work</h3>
+              <p>
+                The portfolio supports two lanes: startup AI engineering roles
+                and practical client offers like local-business sites, lead
+                capture, CRM, follow-up, and approval-first social content.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <section class="story">
         <div class="wrap">
