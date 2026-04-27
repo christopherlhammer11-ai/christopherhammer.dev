@@ -4,7 +4,7 @@
 
 Portfolio: **Live site:** [christopherhammer.dev](https://christopherhammer.dev)  
 Demo: **Proof section:** [https://christopherhammer.dev#proof](https://christopherhammer.dev#proof)  
-Use cases: **Use cases:** [https://christopherhammer.dev#use-cases](https://christopherhammer.dev#use-cases)
+**Use cases:** [https://christopherhammer.dev#use-cases](https://christopherhammer.dev#use-cases)
 
 ## What It Shows
 
