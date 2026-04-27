@@ -2,8 +2,8 @@
 
 **Personal AI portfolio site for Christopher L. Hammer.** This site is the front door for the GitHub portfolio: demos, use cases, project positioning, local-business offers, and proof of shipped work.
 
-Portfolio: **Live site:** [christopherhammer.dev](https://christopherhammer.dev)  
-Demo: **Proof section:** [https://christopherhammer.dev#proof](https://christopherhammer.dev#proof)  
+**Live site:** [christopherhammer.dev](https://christopherhammer.dev)  
+**Proof section:** [https://christopherhammer.dev#proof](https://christopherhammer.dev#proof)  
 **Use cases:** [https://christopherhammer.dev#use-cases](https://christopherhammer.dev#use-cases)
 
 ## What It Shows
